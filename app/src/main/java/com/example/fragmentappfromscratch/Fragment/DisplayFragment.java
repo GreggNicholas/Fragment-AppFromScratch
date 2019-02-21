@@ -16,7 +16,8 @@ import com.example.fragmentappfromscratch.R;
 public class DisplayFragment extends Fragment {
 
 
-    public DisplayFragment() {
+    public static DisplayFragment getInstance() {
+        return new DisplayFragment();
     }
 
     @Override
