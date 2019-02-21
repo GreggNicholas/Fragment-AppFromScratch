@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.fragmentappfromscratch.MainActivity;
 import com.example.fragmentappfromscratch.R;
 
 public class InputFragment extends Fragment {

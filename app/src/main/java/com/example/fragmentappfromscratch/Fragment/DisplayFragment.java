@@ -55,6 +55,7 @@ public class DisplayFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         TextView textView1 = view.findViewById(R.id.textview1_displayFragment);
         TextView textView2 = view.findViewById(R.id.textview2_displayFragment);
         TextView textView3 = view.findViewById(R.id.textview3_displayFragment);
