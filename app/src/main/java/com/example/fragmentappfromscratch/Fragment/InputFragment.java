@@ -15,6 +15,12 @@ import android.widget.EditText;
 import com.example.fragmentappfromscratch.R;
 
 public class InputFragment extends Fragment {
+    private EditText editText1;
+    private EditText editText2;
+    private EditText editText3;
+    private String receiveText1;
+    private String receiveText2;
+    private String receiveText3;
     private View rootView;
     private FragmentInterface mListener;
 
@@ -43,14 +49,18 @@ public class InputFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final EditText editText1 = rootView.findViewById(R.id.edittext1_inputFrag);
-        final EditText editText2 = rootView.findViewById(R.id.edittext2_inputFrag);
-        EditText editText3 = rootView.findViewById(R.id.edittext3_inputFrag);
+        editText1 = rootView.findViewById(R.id.edittext1_inputFrag);
+        editText2 = rootView.findViewById(R.id.edittext2_inputFrag);
+        editText3 = rootView.findViewById(R.id.edittext3_inputFrag);
         Button button = rootView.findViewById(R.id.button_inputFragment);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                receiveText1 = editText1.getText().toString();
+                receiveText2 = editText2.getText().toString();
+                receiveText3 = editText3.getText().toString();
+                mListener.fragmentDataSender(receiveText1, receiveText2, receiveText3);
             }
         });
 

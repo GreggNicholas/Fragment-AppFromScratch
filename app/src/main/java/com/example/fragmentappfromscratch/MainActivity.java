@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements InputFragment.Fra
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_container, InputFragment.getInstance())
+                .addToBackStack(null)
                 .commit();
 
     }
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements InputFragment.Fra
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_container, DisplayFragment.getInstance())
+                .addToBackStack("Input")
                 .commit();
     }
 }
