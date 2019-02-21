@@ -1,7 +1,7 @@
 package com.example.fragmentappfromscratch;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.fragmentappfromscratch.Fragment.DisplayFragment;
 import com.example.fragmentappfromscratch.Fragment.InputFragment;
@@ -20,16 +20,14 @@ public class MainActivity extends AppCompatActivity implements InputFragment.Fra
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.main_container, InputFragment.getInstance())
-                .addToBackStack(null)
                 .commit();
-
     }
 
     @Override
     public void fragmentDataSender(String editText1, String editText2, String editText3) {
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_container, DisplayFragment.getInstance())
+                .replace(R.id.main_container, DisplayFragment.getInstance(editText1, editText2, editText3))
                 .addToBackStack("Input")
                 .commit();
     }

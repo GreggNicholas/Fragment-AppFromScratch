@@ -13,9 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
+        android:autofillHints="@string/funnyhint"
         android:contentDescription="@string/fun_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/edittext2_inputFrag"
@@ -23,9 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="64dp"
+        android:autofillHints="@string/funnyhintmid"
         android:contentDescription="@string/fun_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext1_inputFrag" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext1_inputFrag"
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/edittext3_inputFrag"
@@ -33,9 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:autofillHints="@string/funnyhintmid"
         android:contentDescription="@string/fun_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittext2_inputFrag" />
+        app:layout_constraintTop_toBottomOf="@+id/edittext2_inputFrag"
+        tools:ignore="UnusedAttribute" />
 
 
     <Button

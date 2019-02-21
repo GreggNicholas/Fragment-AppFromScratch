@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.fragmentappfromscratch.R;
 
@@ -61,6 +62,7 @@ public class InputFragment extends Fragment {
                 receiveText2 = editText2.getText().toString();
                 receiveText3 = editText3.getText().toString();
                 mListener.fragmentDataSender(receiveText1, receiveText2, receiveText3);
+                Toast.makeText(getContext(), "MVP!!!", Toast.LENGTH_SHORT).show();
             }
         });
 
