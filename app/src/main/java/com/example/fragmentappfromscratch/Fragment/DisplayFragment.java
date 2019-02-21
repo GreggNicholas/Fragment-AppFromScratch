@@ -14,7 +14,7 @@ import com.example.fragmentappfromscratch.R;
  * A simple {@link Fragment} subclass.
  */
 public class DisplayFragment extends Fragment {
-
+    private InputFragment.FragmentInterface mListener;
 
     public static DisplayFragment getInstance() {
         return new DisplayFragment();
@@ -34,5 +34,6 @@ public class DisplayFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+        mListener = null;
     }
 }
