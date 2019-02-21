@@ -10,37 +10,28 @@ import android.view.ViewGroup;
 
 import com.example.fragmentappfromscratch.R;
 
-public class InputFragment extends Fragment {
-    private FragmentInterface mListener;
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class DisplayFragment extends Fragment {
 
-    public static InputFragment getInstance() {
-        return new InputFragment();
+
+    public DisplayFragment() {
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof FragmentInterface) {
-            mListener = (FragmentInterface) context;
-        } else {
-            throw new RuntimeException(context.toString() + "No interface implemented");
-        }
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_input, container, false);
-    }
-
-    public interface FragmentInterface {
-        void fragmentDataSender(String editText1, String editText2, String editText3);
+        return inflater.inflate(R.layout.fragment_display, container, false);
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        mListener = null;
     }
 }
